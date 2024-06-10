@@ -1,4 +1,4 @@
-
+CREATE DATABASE SIGT
 
 
 CREATE TABLE Usuarios (
@@ -6,7 +6,7 @@ CREATE TABLE Usuarios (
     Nombre NVARCHAR(100) NOT NULL,
     Apellidos NVARCHAR(100) NOT NULL,
     Correo NVARCHAR(100) NOT NULL UNIQUE,
-    Contraseña NVARCHAR(255) NOT NULL,
+    ContraseÃ±a NVARCHAR(255) NOT NULL,
     TipoUsuario NVARCHAR(50) NOT NULL CHECK (TipoUsuario IN ('Estudiante', 'Secretario', 'Asesor', 'Jurado', 'Director'))
 );
 
@@ -37,7 +37,7 @@ CREATE TABLE Tesis (
     Resumen NVARCHAR(MAX) NOT NULL,
     AreaInvestigacion NVARCHAR(100) NOT NULL,
     DocumentoPDF VARBINARY(MAX) NOT NULL, 
-    Estado NVARCHAR(50) NOT NULL CHECK (Estado IN ('Subida', 'En Revisión', 'Aprobada', 'Rechazada')),
+    Estado NVARCHAR(50) NOT NULL CHECK (Estado IN ('Subida', 'En RevisiÃ³n', 'Aprobada', 'Rechazada')),
     FOREIGN KEY (EstudianteID) REFERENCES Usuarios(UsuarioID)
 );
 
